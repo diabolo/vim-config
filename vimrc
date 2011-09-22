@@ -4,6 +4,8 @@
 call pathogen#infect()
 call pathogen#helptags()
 
+set nocompatible		" use vim features
+
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 set showmode
@@ -17,4 +19,5 @@ map <leader>e :e! ~/vimrc<cr>
 
 " When vimrc is edited, reload it
 autocmd! bufwritepost vimrc source ~/vimrc
+
 
