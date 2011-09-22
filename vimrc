@@ -42,3 +42,9 @@ syntax on
 
 " No sound on errors
 set noeb vb t_vb=
+
+" Turn backup off, since most stuff is in git anyway...
+set nobackup
+set nowb
+set noswapfile
+
