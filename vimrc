@@ -1,11 +1,18 @@
 " vimrc file
 
 " Pathogen setup - must be first
+filetype off			"in case earlier config has turned it on
 call pathogen#infect()
 call pathogen#helptags()
 
+filetype plugin indent on
+
 set nocompatible		" use vim features
 
+" This configures F2 as a toggle to turn indenting on and off
+" Pasting into vim from other applications with indenting on
+" is horrible for large blocks of code, so we use this toggle
+" to alleviate this problem
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 set showmode
