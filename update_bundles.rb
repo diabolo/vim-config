@@ -11,6 +11,7 @@ git_bundles = [
   "git://github.com/tpope/vim-vividchalk.git",
   "git://github.com/vim-ruby/vim-ruby.git",
   "git://github.com/vim-scripts/Gist.vim.git",
+  "git://git.wincent.com/command-t.git",
 ]
 
 vim_org_scripts = [
@@ -33,6 +34,7 @@ git_bundles.each do |url|
   puts "unpacking #{url} into #{dir}"
   `git clone #{url} #{dir}`
   FileUtils.rm_rf(File.join(dir, ".git"))
+  dir=="command-t"
 end
 
 vim_org_scripts.each do |name, script_id, script_type|
