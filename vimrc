@@ -22,10 +22,10 @@ let mapleader = ","
 let g:mapleader = ","
 
 " Fast editing of the .vimrc
-map <leader>e :e! ~/vimrc<cr>
+map <leader>e :e! ~/.vimrc<cr>
 
 " When vimrc is edited, reload it
-autocmd! bufwritepost vimrc source ~/vimrc
+autocmd! bufwritepost vimrc source ~/.vimrc
 
 " Disable arrow keys in insert mode so we use normal mode by default
 inoremap  <Up>     <NOP>
@@ -39,3 +39,6 @@ noremap   <Right>  <NOP>
 
 " Syntax highlighting always please
 syntax on
+
+" No sound on errors
+set noeb vb t_vb=
