@@ -12,6 +12,7 @@ git_bundles = [
   "git://github.com/vim-ruby/vim-ruby.git",
   "git://github.com/vim-scripts/Gist.vim.git",
   "git://git.wincent.com/command-t.git",
+  "git://github.com/greyblake/vim-preview.git",
 ]
 
 vim_org_scripts = [
@@ -21,6 +22,27 @@ vim_org_scripts = [
 
 require 'fileutils'
 require 'open-uri'
+
+def command_t(dir)
+  FileUtils.cd(dir)
+  puts "making command-t"
+  puts `rvm use system`
+  puts `rake make`
+  FileUtils.cd('..')
+end
+
+def vim_preview
+  gems = [ 
+    "bluecloth",  
+  ]
+
+  puts "checking gems for vim_preview"
+  puts `rvm use system`
+  gems.each do |gem|
+    res=`gem list --local | grep #{gem}`
+    puts "Missing GEM: #{gem}" unless res.match /#{gem}/
+  end
+end
 
 bundles_dir = File.join(File.dirname(__FILE__), "bundle")
 
@@ -34,13 +56,8 @@ git_bundles.each do |url|
   puts "unpacking #{url} into #{dir}"
   `git clone #{url} #{dir}`
   FileUtils.rm_rf(File.join(dir, ".git"))
-  if dir=="command-t"
-    FileUtils.cd(dir)
-    puts "making command-t"
-    puts `rvm use system`
-    puts `rake make`
-    FileUtils.cd('..')
-  end
+  command_t dir if dir=="command-t"
+  vim_preview if dir=="vim-preview"
 end
 
 vim_org_scripts.each do |name, script_id, script_type|
