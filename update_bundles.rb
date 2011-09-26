@@ -34,7 +34,11 @@ git_bundles.each do |url|
   puts "unpacking #{url} into #{dir}"
   `git clone #{url} #{dir}`
   FileUtils.rm_rf(File.join(dir, ".git"))
-  dir=="command-t"
+  if dir=="command-t"
+					FileUtils.cd(dir)
+					`rvm use system`
+					`rake make`
+	end
 end
 
 vim_org_scripts.each do |name, script_id, script_type|
