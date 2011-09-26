@@ -58,3 +58,8 @@ set listchars=tab:▸\ ,eol:¬
 set tabstop=2
 set shiftwidth=2
 set expandtab
+
+" Line numbers
+:highlight LineNr ctermbg=DarkGrey 
+set numberwidth=3
+nmap <leader>n :set number!<CR>
