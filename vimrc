@@ -63,3 +63,7 @@ set expandtab
 :highlight LineNr ctermbg=DarkGrey 
 set numberwidth=3
 nmap <leader>n :set number!<CR>
+
+" Status line
+set laststatus=2
+set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
