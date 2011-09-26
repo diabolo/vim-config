@@ -54,3 +54,7 @@ nmap <leader>l :set list!<CR>
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
 
+" Replace tabs with spaces and use 2 spaces by default
+set tabstop=2
+set shiftwidth=2
+set expandtab
