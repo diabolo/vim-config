@@ -11,7 +11,7 @@ git_bundles = [
   "http://github.com/tpope/vim-vividchalk.git",
   "http://github.com/vim-ruby/vim-ruby.git",
   "http://github.com/vim-scripts/Gist.vim.git",
-  "http://git.wincent.com/command-t.git",
+  "https://github.com/wincent/Command-T.git",
   "http://github.com/greyblake/vim-preview.git",
 ]
 
@@ -45,14 +45,14 @@ def vim_preview
 end
 
 bundles_dir = File.join(File.dirname(__FILE__), "bundle")
-FileUtils.mkdir(bundles_dir) # we may not have one yet
+`mkdir #{bundles_dir}` # we may not have one yet
 FileUtils.cd(bundles_dir)
 
 puts "trashing everything (lookout!)"
 Dir["*"].each {|d| FileUtils.rm_rf d }
 
 git_bundles.each do |url|
-  dir = url.split('/').last.sub(/\.git$/, '')
+  dir = url.split('/').last.sub(/\.git$/, '').downcase
   puts "unpacking #{url} into #{dir}"
   `git clone #{url} #{dir}`
   FileUtils.rm_rf(File.join(dir, ".git"))
