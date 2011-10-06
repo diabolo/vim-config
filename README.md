@@ -8,7 +8,7 @@ To use this configuration you need to
         git clone git@github.com:diabolo/vim-config.git .vim
 
 1. Link .vimrc and .gvimrc to the vimrc and gvimrc files in this folder
-1. Run `./update_bundles`
+1. Run `./update_bundles` in your .vim folder
 
 ## Credits
 
