@@ -1,18 +1,18 @@
 #!/usr/bin/env ruby
 
 git_bundles = [ 
-  "git://github.com/tpope/vim-cucumber.git",
-  "git://github.com/tpope/vim-fugitive.git",
-  "git://github.com/tpope/vim-git.git",
-  "git://github.com/tpope/vim-haml.git",
-  "git://github.com/tpope/vim-markdown.git",
-  "git://github.com/tpope/vim-rails.git",
-  "git://github.com/tpope/vim-surround.git",
-  "git://github.com/tpope/vim-vividchalk.git",
-  "git://github.com/vim-ruby/vim-ruby.git",
-  "git://github.com/vim-scripts/Gist.vim.git",
-  "git://git.wincent.com/command-t.git",
-  "git://github.com/greyblake/vim-preview.git",
+  "http://github.com/tpope/vim-cucumber.git",
+  "http://github.com/tpope/vim-fugitive.git",
+  "http://github.com/tpope/vim-git.git",
+  "http://github.com/tpope/vim-haml.git",
+  "http://github.com/tpope/vim-markdown.git",
+  "http://github.com/tpope/vim-rails.git",
+  "http://github.com/tpope/vim-surround.git",
+  "http://github.com/tpope/vim-vividchalk.git",
+  "http://github.com/vim-ruby/vim-ruby.git",
+  "http://github.com/vim-scripts/Gist.vim.git",
+  "http://git.wincent.com/command-t.git",
+  "http://github.com/greyblake/vim-preview.git",
 ]
 
 vim_org_scripts = [
@@ -45,7 +45,7 @@ def vim_preview
 end
 
 bundles_dir = File.join(File.dirname(__FILE__), "bundle")
-
+FileUtils.mkdir(bundles_dir) # we may not have one yet
 FileUtils.cd(bundles_dir)
 
 puts "trashing everything (lookout!)"
