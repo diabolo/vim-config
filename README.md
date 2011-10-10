@@ -20,7 +20,7 @@ This configuration's purpose is to support programming Rails applications effect
 
 ## File Navigation
 
-Use Command-T to locate files, open files and open files that are already open (manage buffers). When working in a Rails project use the alternative file from rails.vim in addition to this <:A>
+Use Command-T to locate files, open files and open files that are already open (manage buffers). When working in a Rails project use the alternative file from rails.vim in addition to this `<:A>`
 
 ### Usage Example
 
@@ -31,8 +31,8 @@ Use Command-T to locate files, open files and open files that are already open (
 
 Immediately useful commands are:
 
- - <Ctrl-c>  - close command-T
- - <Enter>   - open selected file
+ - `<Ctrl-c>`  - close command-T
+ - `<Enter>`   - open selected file
  - type in text - restrict files in the list
 
 Get help on plugin with `:help command-t`
