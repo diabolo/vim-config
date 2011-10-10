@@ -67,3 +67,8 @@ nmap <leader>n :set number!<CR>
 " Status line
 set laststatus=2
 set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
+
+" Change how brackets are highlighted
+" Default vim config makes brackets hard to read so we will use an underline
+" instead
+:hi MatchParen cterm=underline ctermbg=none ctermfg=none
