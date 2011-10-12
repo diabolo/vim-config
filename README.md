@@ -1,6 +1,11 @@
 #   Vim Files
 
-To use this configuration you need to 
+To use this configuration you need
+
+1. Have a working ruby
+1. Have vim installed with ruby support
+
+Then you need to 
 
 1. Back up existing vim files
 1. Checkout this repository to ~/.vim
