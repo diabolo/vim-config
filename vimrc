@@ -72,3 +72,6 @@ set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
 " Default vim config makes brackets hard to read so we will use an underline
 " instead
 :hi MatchParen cterm=underline ctermbg=none ctermfg=none
+
+" refresh command-t
+map <leader>ctf :CommandTFlush
