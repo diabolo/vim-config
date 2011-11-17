@@ -42,7 +42,12 @@ Immediately useful commands are:
 
 Get help on plugin with `:help command-t`
 
+## Vimrc entries
 
+Generally each entry will be documented by
+
+1. a comment
+2. the commit message of the change
 
 
 
