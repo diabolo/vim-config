@@ -79,3 +79,5 @@ map <leader>ctf :CommandTFlush
 " ignore tmp folders in file lists (e.g. command-t)
 :set wildignore+=tmp/**
 
+" autosave buffers
+:set autowriteall
