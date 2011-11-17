@@ -75,3 +75,7 @@ set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
 
 " refresh command-t
 map <leader>ctf :CommandTFlush
+
+" ignore tmp folders in file lists (e.g. command-t)
+:set wildignore+=tmp/**
+
