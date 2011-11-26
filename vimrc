@@ -63,6 +63,7 @@ set expandtab
 :highlight LineNr ctermbg=DarkGrey 
 set numberwidth=3
 nmap <leader>n :set number!<CR>
+set number
 
 " Status line
 set laststatus=2
