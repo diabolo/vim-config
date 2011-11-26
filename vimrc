@@ -86,3 +86,7 @@ set autowriteall
 " Keep more context when scrolling off the end of a buffer
 set scrolloff=3
 
+" Keep focused window at certain width
+set wmw=12
+set winwidth=84
+
