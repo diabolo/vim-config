@@ -60,7 +60,7 @@ set shiftwidth=2
 set expandtab
 
 " Line numbers
-:highlight LineNr ctermbg=DarkGrey 
+highlight LineNr ctermbg=DarkGrey 
 set numberwidth=3
 nmap <leader>n :set number!<CR>
 set number
@@ -72,13 +72,17 @@ set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
 " Change how brackets are highlighted
 " Default vim config makes brackets hard to read so we will use an underline
 " instead
-:hi MatchParen cterm=underline ctermbg=none ctermfg=none
+hi MatchParen cterm=underline ctermbg=none ctermfg=none
 
 " refresh command-t
 map <leader>ctf :CommandTFlush
 
 " ignore tmp folders in file lists (e.g. command-t)
-:set wildignore+=tmp/**
+set wildignore+=tmp/**
 
 " autosave buffers
-:set autowriteall
+set autowriteall
+
+" Keep more context when scrolling off the end of a buffer
+set scrolloff=3
+
