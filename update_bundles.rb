@@ -15,6 +15,7 @@ git_bundles = [
   "http://github.com/greyblake/vim-preview.git",
   "http://github.com/scrooloose/nerdcommenter.git",
   "https://github.com/mileszs/ack.vim.git",
+  "http://github.com/altercation/vim-colors-solarized.git",
 ]
 
 vim_org_scripts = [

@@ -90,3 +90,6 @@ set scrolloff=3
 set wmw=12
 set winwidth=84
 
+" Colorschemes
+set background=dark
+colorscheme solarized
