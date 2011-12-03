@@ -80,6 +80,12 @@ map <leader>ctf :CommandTFlush
 " ignore tmp folders in file lists (e.g. command-t)
 set wildignore+=tmp/**
 
+" ignore img files
+set wildignore+=*.gif,*.jpg,*.png
+
+" ignore images in rails applications
+set wildignore+='public/imgages/**'
+
 " autosave buffers
 set autowriteall
 
