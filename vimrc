@@ -143,3 +143,22 @@ map <leader>r :call RunTestFile()<cr>
 map <leader>R :call RunNearestTest()<cr>
 " Run all test files
 map <leader>a :call RunTests('spec')<cr>
+
+" Vimcast 4 - Tidying Whitespace
+"
+" Function and autocmd to strip trailing whitespace from files when saving
+
+function! <SID>StripTrailingWhitespaces()
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
+    %s/\s\+$//e
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
+
+autocmd BufWritePre *.rb,*.markdown,*.feature :call <SID>StripTrailingWhitespaces()
+
