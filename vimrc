@@ -88,6 +88,17 @@ set autowriteall
 " Keep more context when scrolling off the end of a buffer
 set scrolloff=3
 
+" Working with Split Windows see
+" http://stevelosh.com/blog/2010/09/coming-home-to-vim/
+"
+" open new vertical split and switch to it
+nnoremap <leader>w <C-w>v<C-w>l
+" abbreviated mappings for navigating splits
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
 " Keep focused window at certain width
 set wmw=12
 set winwidth=84
