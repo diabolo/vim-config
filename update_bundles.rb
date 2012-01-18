@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-git_bundles = [ 
+git_bundles = [
   "http://github.com/tpope/vim-cucumber.git",
   "http://github.com/tpope/vim-fugitive.git",
   "http://github.com/tpope/vim-git.git",
@@ -35,8 +35,8 @@ def command_t(dir)
 end
 
 def vim_preview
-  gems = [ 
-    "bluecloth",  
+  gems = [
+    "bluecloth",
   ]
 
   puts "checking gems for vim_preview"

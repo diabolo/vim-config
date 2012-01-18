@@ -162,3 +162,8 @@ endfunction
 
 autocmd BufWritePre *.rb,*.markdown,*.feature :call <SID>StripTrailingWhitespaces()
 
+" Improve markdown
+"
+:autocmd FileType markdown setlocal spell spelllang=en_uk
+:autocmd FileType markdown setlocal tw=78 ai com=fb:*-
+:autocmd FileType markdown setlocal colorcolumn=80

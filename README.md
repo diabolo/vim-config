@@ -17,21 +17,27 @@ Then you need to
 
 ## Credits
 
-This config comes from [ Tammer Saleh ](http://tammersaleh.com/posts/the-modern-vim-config-with-pathogen)
+This config comes from [ Tammer Saleh
+](http://tammersaleh.com/posts/the-modern-vim-config-with-pathogen)
 
 # Usage
 
-This configuration's purpose is to support programming Rails applications effectively. To do this it has some opinions about how things should be done. However its knowledge of Vim is very limited, and this config is very much work in progress. So if you think things should be done differently then fork it, make the changes and submit a pull request.
+This configuration's purpose is to support programming Rails applications
+effectively. To do this it has some opinions about how things should be done.
+However its knowledge of Vim is very limited, and this config is very much
+work in progress. So if you think things should be done differently then fork
+it, make the changes and submit a pull request.
 
 ## File Navigation
 
-Use Command-T to locate files, open files and open files that are already open (manage buffers). When working in a Rails project use the alternative file from rails.vim in addition to this `<:A>`
+Use Command-T to locate files, open files and open files that are already open
+(manage buffers). When working in a Rails project use the alternative file
+from rails.vim in addition to this `<:A>`
 
 ### Usage Example
 
 - navigate to folder in command prompt
-- open vim (do not pass in folder as parameter) 
-    $ vim
+- open vim (do not pass in folder as parameter) $ vim
 - press ,t to activate command-t plugin
 
 Immediately useful commands are:
@@ -48,6 +54,4 @@ Generally each entry will be documented by
 
 1. a comment
 2. the commit message of the change
-
-
 
