@@ -9,6 +9,10 @@ filetype plugin indent on
 
 set nocompatible		" use vim features
 
+" for ruby text object
+" http://vimcasts.org/blog/2010/12/a-text-object-for-ruby-blocks/
+runtime macros/matchit.vim
+
 " This configures F2 as a toggle to turn indenting on and off
 " Pasting into vim from other applications with indenting on
 " is horrible for large blocks of code, so we use this toggle
