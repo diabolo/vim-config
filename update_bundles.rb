@@ -21,11 +21,10 @@ git_bundles = [
   "http://github.com/greyblake/vim-preview.git",
   "http://github.com/mileszs/ack.vim.git",
   "http://github.com/altercation/vim-colors-solarized.git",
-]
-
-vim_org_scripts = [
-  ["IndexedSearch", "7062",  "plugin"],
-  ["jquery",        "12107", "syntax"],
+  "http://github.com/tsaleh/vim-align.git",
+  "http://github.com/vim-scripts/Gist.vim.git",
+  "http://github.com/vim-scripts/IndexedSearch.git",
+  "http://github.com/vim-scripts/jQuery.git",
 ]
 
 require 'fileutils'
@@ -71,11 +70,3 @@ git_bundles.each do |url|
   vim_preview if dir=="vim-preview"
 end
 
-vim_org_scripts.each do |name, script_id, script_type|
-  puts "downloading #{name}"
-  local_file = File.join(name, script_type, "#{name}.vim")
-  FileUtils.mkdir_p(File.dirname(local_file))
-  File.open(local_file, "w") do |file|
-    file << open("http://www.vim.org/scripts/download_script.php?src_id=#{script_id}").read
-  end
-end
