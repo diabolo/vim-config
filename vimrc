@@ -116,6 +116,15 @@ colorscheme solarized
 " instead
 hi MatchParen cterm=underline ctermbg=none ctermfg=none
 
+" Spelling
+"
+if has("spell")
+  " toggle spelling use ,s
+  imap <Leader>s <C-o>:setlocal spell! spelllang=en_gb<CR>
+  nmap <Leader>s :setlocal spell! spelllang=en_gb<CR>
+endif
+
+
 " Running tests the Gary Bernhardt way
 "
 function! RunTests(filename)
@@ -179,6 +188,6 @@ autocmd BufWritePre *.rb,*.markdown,*.feature :call <SID>StripTrailingWhitespace
 
 " Improve markdown
 "
-:autocmd FileType markdown setlocal spell spelllang=en_uk
+:autocmd FileType markdown setlocal spell spelllang=en_gb
 :autocmd FileType markdown setlocal tw=78 ai com=fb:*-
 :autocmd FileType markdown setlocal colorcolumn=80
