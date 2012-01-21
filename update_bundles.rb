@@ -21,7 +21,7 @@ git_bundles = [
   "http://github.com/greyblake/vim-preview.git",
   "http://github.com/mileszs/ack.vim.git",
   "http://github.com/altercation/vim-colors-solarized.git",
-  "http://github.com/tsaleh/vim-align.git",
+  "http://github.com/godlygeek/tabular.git",
   "http://github.com/vim-scripts/Gist.vim.git",
   "http://github.com/vim-scripts/IndexedSearch.git",
   "http://github.com/vim-scripts/jQuery.git",
