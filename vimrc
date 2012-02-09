@@ -25,6 +25,9 @@ set showmode
 let mapleader = ","
 let g:mapleader = ","
 
+" Fast esc in insert mode
+inoremap jj <Esc>
+
 " Fast editing of the .vimrc
 map <leader>e :e! ~/.vimrc<cr>
 
@@ -206,3 +209,4 @@ function! s:align()
     call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
   endif
 endfunction
+
