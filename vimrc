@@ -44,6 +44,12 @@ noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
 
+" Here we are trying to get the arrow keys to work when using CommandT in TMux
+map <Esc>[A <Up>
+map <Esc>[B <Down>
+map <Esc>[C <Right>
+map <Esc>[D <Left>
+
 " Syntax highlighting always please
 syntax on
 
