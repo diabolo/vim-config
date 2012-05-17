@@ -111,7 +111,7 @@ set wmw=12
 set winwidth=84
 
 " Colorschemes
-" set background=light
+set background=light
 colorscheme solarized
 
 " Change how brackets are highlighted
