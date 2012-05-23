@@ -34,6 +34,9 @@ map <leader>e :e! ~/.vimrc<cr>
 " When vimrc is edited, reload it
 autocmd! bufwritepost vimrc source ~/.vimrc
 
+" Longer memory of commands
+set history=200
+
 " Disable arrow keys in insert mode so we use normal mode by default
 inoremap  <Up>     <NOP>
 inoremap  <Down>   <NOP>
