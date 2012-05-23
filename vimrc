@@ -56,6 +56,10 @@ map <Esc>[D <Left>
 " Syntax highlighting always please
 syntax on
 
+" highlight .hamlc files as haml
+" this should be in a haml or coffee plugin, but isn't at the moment
+au BufRead,BufNewFile *.hamlc set ft=haml
+
 " No sound on errors
 set noeb vb t_vb=
 
