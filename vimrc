@@ -50,6 +50,11 @@ noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
 
+" Command T
+" change local directory to current file so command-t lists relevant files
+map <leader>c :lcd %:p:h
+" refresh command-t so it sees new files and deletes
+map <leader>ctf :CommandTFlush
 " Here we are trying to get the arrow keys to work when using CommandT in TMux
 map <Esc>[A <Up>
 map <Esc>[B <Down>
@@ -92,9 +97,6 @@ set number
 " Status line
 set laststatus=2
 set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
-
-" refresh command-t
-map <leader>ctf :CommandTFlush
 
 " ignore tmp folders in file lists (e.g. command-t)
 set wildignore+=tmp/**
