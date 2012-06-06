@@ -26,6 +26,7 @@ git_bundles = [
   "http://github.com/vim-scripts/jQuery.git",
   "https://github.com/vim-scripts/vimwiki",
   "https://github.com/kchmck/vim-coffee-script.git",
+  "https://github.com/kakkyz81/evervim",
 ]
 
 require 'fileutils'
