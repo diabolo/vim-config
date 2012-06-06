@@ -24,6 +24,9 @@ set showmode
 " leader
 let mapleader = ","
 let g:mapleader = ","
+" alternative mapping for reverse character search
+" either we use ,, or 
+nnoremap ' ,
 
 " Fast esc in insert mode
 inoremap jj <Esc>
