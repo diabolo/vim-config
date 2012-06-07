@@ -212,6 +212,10 @@ autocmd BufWritePre *.rb,*.markdown,*.feature :call <SID>StripTrailingWhitespace
 :autocmd FileType markdown setlocal spell spelllang=en_gb
 :autocmd FileType markdown setlocal tw=78 ai com=fb:*-
 :autocmd FileType markdown setlocal colorcolumn=80
+"
+" Use formd with markdown
+nmap <leader>fr :%! ~/bin/formd -r<CR>
+nmap <leader>fi :%! ~/bin/formd -i<CR>
 
 " the following is for cucumber tables but will sort of work with markdown
 " tables see https://gist.github.com/287147
