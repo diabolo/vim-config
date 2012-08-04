@@ -51,6 +51,14 @@ noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
 
 " Command T
+" ignore files to make list load faster
+set wildignore+=tmp/**
+set wildignore+=*.gif,*.jpg,*.png
+" ignore images in rails applications
+set wildignore+=public/images/**
+" ignore vendored files in rails applications
+set wildignore+=vendor/**
+
 " change local directory to current file so command-t lists relevant files
 map <leader>c :lcd %:p:h
 " refresh command-t so it sees new files and deletes
@@ -98,15 +106,6 @@ set number
 set laststatus=2
 set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
 
-" ignore tmp folders in file lists (e.g. command-t)
-set wildignore+=tmp/**
-
-" ignore img files
-set wildignore+=*.gif,*.jpg,*.png
-
-" ignore images in rails applications
-set wildignore+='public/imgages/**'
-
 " autosave buffers
 set autowriteall
 
@@ -144,7 +143,6 @@ if has("spell")
   imap <Leader>s <C-o>:setlocal spell! spelllang=en_gb<CR>
   nmap <Leader>s :setlocal spell! spelllang=en_gb<CR>
 endif
-
 
 " Running tests the Gary Bernhardt way
 "
