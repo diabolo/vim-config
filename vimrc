@@ -112,6 +112,9 @@ set autowriteall
 " Keep more context when scrolling off the end of a buffer
 set scrolloff=3
 
+" find using Ack!
+nnoremap <leader>f :Ack! 
+
 " Working with Split Windows see
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 "
