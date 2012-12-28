@@ -194,6 +194,6 @@ function! s:align()
   endif
 endfunction
 
-source .gbernhardt_tests
-source .vimwiki
+source ~/.vim/.gbernhardt_tests
+source ~/.vim/.vimwiki
 
