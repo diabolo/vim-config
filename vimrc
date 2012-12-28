@@ -69,6 +69,10 @@ map <Esc>[B <Down>
 map <Esc>[C <Right>
 map <Esc>[D <Left>
 
+" Use netrw to preview files in a directory
+let g:netrw_preview = 1 "preview in vertical split"
+let g:netrw_winsize = 0
+
 " Syntax highlighting always please
 syntax on
 
@@ -147,49 +151,6 @@ if has("spell")
   nmap <Leader>s :setlocal spell! spelllang=en_gb<CR>
 endif
 
-" Running tests the Gary Bernhardt way
-"
-function! RunTests(filename)
-    " Write the file and run tests for the given filename
-    :w
-    :silent !echo;echo;echo;echo;echo
-    exec ":!bundle exec rspec " . a:filename
-endfunction
-
-function! SetTestFile()
-    " Set the spec file that tests will be run for.
-    let t:grb_test_file=@%
-endfunction
-
-function! RunTestFile(...)
-    if a:0
-        let command_suffix = a:1
-    else
-        let command_suffix = ""
-    endif
-
-    " Run the tests for the previously-marked file.
-    let in_spec_file = match(expand("%"), '_spec.rb$') != -1
-    if in_spec_file
-        call SetTestFile()
-    elseif !exists("t:grb_test_file")
-        return
-    end
-    call RunTests(t:grb_test_file . command_suffix)
-endfunction
-
-function! RunNearestTest()
-    let spec_line_number = line('.')
-    call RunTestFile(":" . spec_line_number)
-endfunction
-
-" Run this file
-map <leader>r :call RunTestFile()<cr>
-" Run only the example under the cursor
-map <leader>R :call RunNearestTest()<cr>
-" Run all test files
-map <leader>a :call RunTests('spec')<cr>
-
 " Vimcast 4 - Tidying Whitespace
 "
 " Function and autocmd to strip trailing whitespace from files when saving
@@ -206,7 +167,7 @@ function! <SID>StripTrailingWhitespaces()
     call cursor(l, c)
 endfunction
 
-autocmd BufWritePre *.rb,*.markdown,*.feature :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre *.rb,*.markdown,*.md,*.feature :call <SID>StripTrailingWhitespaces()
 
 " Improve markdown
 "
@@ -232,4 +193,6 @@ function! s:align()
     call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
   endif
 endfunction
+
+source .gbernhardt_tests
 
