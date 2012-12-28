@@ -195,4 +195,5 @@ function! s:align()
 endfunction
 
 source .gbernhardt_tests
+source .vimwiki
 

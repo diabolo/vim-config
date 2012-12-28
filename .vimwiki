@@ -1,0 +1,5 @@
+" Vimwiki config
+" see `http://superuser.com/questions/495889/have-vimwiki-set-filetype-only-within-wikihome`
+
+" stop vimwiki taking over markdown files
+let g:vimwiki_ext2syntax = {}
