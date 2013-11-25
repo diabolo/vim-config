@@ -5,11 +5,11 @@ To use this configuration you need
 1. Have a working ruby
 1. Have vim installed with ruby support
 
-Then you need to 
+Then you need to
 
 1. Back up existing vim files
 1. Checkout this repository to ~/.vim
-    
+
         git clone git@github.com:diabolo/vim-config.git .vim
 
 1. Link .vimrc and .gvimrc to the vimrc and gvimrc files in this folder

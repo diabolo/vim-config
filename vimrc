@@ -52,11 +52,12 @@ noremap   <Right>  <NOP>
 
 " Command T
 " ignore files to make list load faster
-set wildignore+=tmp/**
+set wildignore+=tmp/**,.tags/**
 set wildignore+=*.gif,*.jpg,*.png
 " ignore images in rails applications
 set wildignore+=public/images/**
 " ignore vendored files in rails applications
+set wildignore+=vendor/**
 set wildignore+=vendor/**
 
 " change local directory to current file so command-t lists relevant files
@@ -137,6 +138,7 @@ set winwidth=84
 " Colorschemes
 set background=light
 colorscheme solarized
+call togglebg#map("<F5>")
 
 " Change how brackets are highlighted
 " Default vim config makes brackets hard to read so we will use an underline

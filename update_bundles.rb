@@ -27,18 +27,15 @@ git_bundles = [
   "https://github.com/vim-scripts/vimwiki",
   "https://github.com/kchmck/vim-coffee-script.git",
   "https://github.com/othree/html5.vim.git",
+  "https://github.com/vim-scripts/Rename",
 ]
 
 require 'fileutils'
 require 'open-uri'
 
-def ensure_system_ruby
-end
-
 def command_t(dir)
   FileUtils.cd(dir)
   puts "making command-t"
-  ensure_system_ruby
   puts `rake make`
   FileUtils.cd('..')
 end
@@ -49,7 +46,6 @@ def vim_preview
   ]
 
   puts "checking gems for vim_preview"
-  ensure_system_ruby
   gems.each do |gem|
     res=`gem list --local | grep #{gem}`
     puts "Missing GEM: #{gem}" unless res.match /#{gem}/
