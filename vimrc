@@ -25,7 +25,7 @@ set showmode
 let mapleader = ","
 let g:mapleader = ","
 " alternative mapping for reverse character search
-" either we use ,, or 
+" either we use ,, or
 nnoremap ' ,
 
 " Fast esc in insert mode
@@ -91,7 +91,7 @@ set noswapfile
 
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
- 
+
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
 
@@ -102,7 +102,7 @@ set shiftwidth=2
 set expandtab
 
 " Line numbers
-highlight LineNr ctermbg=DarkGrey 
+highlight LineNr ctermbg=DarkGrey
 set numberwidth=3
 nmap <leader>n :set number!<CR>
 set number
@@ -118,7 +118,7 @@ set autowriteall
 set scrolloff=3
 
 " find using Ack!
-nnoremap <leader>f :Ack! 
+nnoremap <leader>f :Ack!
 
 " Working with Split Windows see
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/
