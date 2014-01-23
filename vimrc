@@ -198,4 +198,5 @@ endfunction
 
 source ~/.vim/.gbernhardt_tests
 source ~/.vim/.vimwiki
-let g:Powerline_cache_enabled = 0
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tmuxline#enabled = 0
