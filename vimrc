@@ -136,7 +136,7 @@ set wmw=12
 set winwidth=84
 
 " Colorschemes
-set background=light
+set background=dark
 colorscheme solarized
 call togglebg#map("<F5>")
 
@@ -198,4 +198,4 @@ endfunction
 
 source ~/.vim/.gbernhardt_tests
 source ~/.vim/.vimwiki
-
+let g:Powerline_cache_enabled = 0
