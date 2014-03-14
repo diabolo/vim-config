@@ -52,13 +52,12 @@ noremap   <Right>  <NOP>
 
 " Command T
 " ignore files to make list load faster
-set wildignore+=tmp/**,.tags/**
+set wildignore+=tmp,.tags
 set wildignore+=*.gif,*.jpg,*.png
 " ignore images in rails applications
-set wildignore+=public/images/**
+set wildignore+=public/images
 " ignore vendored files in rails applications
-set wildignore+=vendor/**
-set wildignore+=vendor/**
+set wildignore+=vendor
 
 " change local directory to current file so command-t lists relevant files
 map <leader>c :lcd %:p:h
