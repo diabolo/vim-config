@@ -37,6 +37,10 @@ map <leader>e :e! ~/.vimrc<cr>
 " When vimrc is edited, reload it
 autocmd! bufwritepost vimrc source ~/.vimrc
 
+" Fast insert of debugger command
+map <leader>d obyebug<ESC>
+map <leader>D Obyebug<ESC>
+
 " Longer memory of commands
 set history=200
 
