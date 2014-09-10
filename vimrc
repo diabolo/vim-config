@@ -38,8 +38,8 @@ map <leader>e :e! ~/.vimrc<cr>
 autocmd! bufwritepost vimrc source ~/.vimrc
 
 " Fast insert of debugger command
-map <leader>d obyebug<ESC>
-map <leader>D Obyebug<ESC>
+map <leader>d obinding.pry<ESC>
+map <leader>D Obinding.pry<ESC>
 
 " Longer memory of commands
 set history=200
