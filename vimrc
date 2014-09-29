@@ -41,6 +41,9 @@ autocmd! bufwritepost vimrc source ~/.vimrc
 map <leader>d obinding.pry<ESC>
 map <leader>D Obinding.pry<ESC>
 
+" Reload all files nicely e.g. after branch swap
+map <leader>, set autoread checktime
+
 " Longer memory of commands
 set history=200
 
