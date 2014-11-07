@@ -32,6 +32,8 @@ git_bundles = [
   "https://github.com/edkolev/tmuxline.vim",
   'https://github.com/slim-template/vim-slim.git',
   'https://github.com/yssl/QFEnter.git',
+  'https://github.com/dag/vim-fish.git',
+  'https://github.com/heartsentwined/vim-emblem.git',
 ]
 
 require 'fileutils'
