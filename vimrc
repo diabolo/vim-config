@@ -9,6 +9,11 @@ filetype plugin indent on
 
 set nocompatible		" use vim features
 
+" setting shell interactive seems to mess up command-t. We could try
+"    set shell=bash
+" but for now I'll just comment it out and see what happens
+" set shell=bash\ -i
+
 " for ruby text object
 " http://vimcasts.org/blog/2010/12/a-text-object-for-ruby-blocks/
 runtime macros/matchit.vim
@@ -106,6 +111,9 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
+
+" ensure this happens with javascript as well
+autocmd Filetype javascript setlocal ts=2 sw=2 expandtab
 
 " Line numbers
 highlight LineNr ctermbg=DarkGrey
