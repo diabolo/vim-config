@@ -24,7 +24,6 @@ git_bundles = [
   "http://github.com/vim-scripts/Gist.vim.git",
   "http://github.com/vim-scripts/IndexedSearch.git",
   "http://github.com/vim-scripts/jQuery.git",
-  "https://github.com/vim-scripts/vimwiki",
   "https://github.com/kchmck/vim-coffee-script.git",
   "https://github.com/othree/html5.vim.git",
   "https://github.com/vim-scripts/Rename",
@@ -35,6 +34,7 @@ git_bundles = [
   'https://github.com/dag/vim-fish.git',
   'https://github.com/heartsentwined/vim-emblem.git',
   'https://github.com/tpope/vim-projectionist.git',
+  'https://github.com/moll/vim-bbye.git',
 ]
 
 require 'fileutils'
