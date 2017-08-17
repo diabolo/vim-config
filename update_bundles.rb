@@ -36,6 +36,7 @@ git_bundles = [
   'https://github.com/tpope/vim-projectionist.git',
   'https://github.com/moll/vim-bbye.git',
   'https://github.com/elixir-lang/vim-elixir.git',
+  'https://github.com/slashmili/alchemist.vim.git',
 ]
 
 require 'fileutils'
