@@ -81,6 +81,10 @@ map <Esc>[B <Down>
 map <Esc>[C <Right>
 map <Esc>[D <Left>
 
+" Try and stop CommandT looking outside project root folder 
+let g:CommandTTraverseSCM = 'pwd'
+let g:CommandTFileScanner = 'find'
+
 " Use netrw to preview files in a directory
 let g:netrw_preview = 1 "preview in vertical split"
 let g:netrw_winsize = 0
