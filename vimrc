@@ -65,7 +65,7 @@ noremap   <Right>  <NOP>
 " Command T
 " ignore files to make list load faster
 set wildignore+=tmp,.tags
-set wildignore+=*.gif,*.jpg,*.png
+set wildignore+=*.gif,*.jpg,*.png,*.cache
 " ignore images in rails applications
 set wildignore+=public/images
 " ignore vendored files in rails applications
