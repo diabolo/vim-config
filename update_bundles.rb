@@ -10,7 +10,6 @@ git_bundles = [
   "http://github.com/tpope/vim-git.git",
   "http://github.com/tpope/vim-haml.git",
   "http://github.com/tpope/vim-liquid.git",
-  "http://github.com/tpope/vim-markdown.git",
   "http://github.com/tpope/vim-rails.git",
   "http://github.com/tpope/vim-ragtag.git",
   "http://github.com/tpope/vim-surround.git",
@@ -31,12 +30,15 @@ git_bundles = [
   "https://github.com/edkolev/tmuxline.vim",
   'https://github.com/slim-template/vim-slim.git',
   'https://github.com/yssl/QFEnter.git',
-  'https://github.com/dag/vim-fish.git',
   'https://github.com/heartsentwined/vim-emblem.git',
   'https://github.com/tpope/vim-projectionist.git',
   'https://github.com/moll/vim-bbye.git',
   'https://github.com/elixir-lang/vim-elixir.git',
   'https://github.com/slashmili/alchemist.vim.git',
+  'https://github.com/reedes/vim-pencil',
+  "http://github.com/tpope/vim-markdown.git",
+  'https://github.com/junegunn/goyo.vim',
+  'https://github.com/junegunn/limelight.vim'
 ]
 
 require 'fileutils'
