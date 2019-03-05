@@ -36,6 +36,7 @@ git_bundles = [
   'https://github.com/elixir-lang/vim-elixir.git',
   'https://github.com/slashmili/alchemist.vim.git',
   'https://github.com/reedes/vim-pencil',
+  'https://github.com/reedes/vim-colors-pencil',
   "http://github.com/tpope/vim-markdown.git",
   'https://github.com/junegunn/goyo.vim',
   'https://github.com/junegunn/limelight.vim'
