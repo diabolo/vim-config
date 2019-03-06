@@ -216,5 +216,15 @@ endfunction
 
 source ~/.vim/.gbernhardt_tests
 source ~/.vim/.vimwiki
+
+
+function! Prose()
+  Goyo
+  SoftPencil
+endfunction
+
+command! Prose call Prose()
+nmap <leader>p :Prose<CR>
+
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tmuxline#enabled = 0
