@@ -176,6 +176,7 @@ endif
 " Function and autocmd to strip trailing whitespace from files when saving
 
 function! <SID>StripTrailingWhitespaces()
+  if &filetype!='markdown'
     " Preparation: save last search, and cursor position.
     let _s=@/
     let l = line(".")
@@ -185,6 +186,7 @@ function! <SID>StripTrailingWhitespaces()
     " Clean up: restore previous search history, and cursor position
     let @/=_s
     call cursor(l, c)
+  endif
 endfunction
 
 autocmd BufWritePre *.rb,*.markdown,*.md,*.feature :call <SID>StripTrailingWhitespaces()
@@ -224,7 +226,7 @@ function! Prose()
 endfunction
 
 command! Prose call Prose()
-nmap <leader>p :Prose<CR>
+nmap <leader>pr :Prose<CR>
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tmuxline#enabled = 0
