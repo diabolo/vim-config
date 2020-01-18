@@ -136,7 +136,7 @@ set autowriteall
 set scrolloff=3
 
 " find using Ack!
-nnoremap <leader>f :Ack!<Space>
+nnoremap <leader>f :Rg<Space>
 
 " Working with Split Windows see
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/
