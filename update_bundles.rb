@@ -17,7 +17,7 @@ git_bundles = [
   "http://github.com/vim-ruby/vim-ruby.git",
   "http://github.com/wincent/Command-T.git",
   "http://github.com/greyblake/vim-preview.git",
-  "https://github.com/jremmen/vim-ripgrep",
+  "http://github.com/mileszs/ack.vim.git",
   "http://github.com/altercation/vim-colors-solarized.git",
   "http://github.com/godlygeek/tabular.git",
   "http://github.com/vim-scripts/Gist.vim.git",
