@@ -62,6 +62,9 @@ noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
 
+" Set tags for vim-fugitive
+set tags^=.git/tags
+
 " Command T
 " ignore files to make list load faster
 set wildignore+=tmp,.tags
