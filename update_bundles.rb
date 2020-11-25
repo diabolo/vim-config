@@ -15,7 +15,6 @@ git_bundles = [
   "http://github.com/tpope/vim-surround.git",
   "http://github.com/tpope/vim-vividchalk.git",
   "http://github.com/vim-ruby/vim-ruby.git",
-  "http://github.com/wincent/Command-T.git",
   "http://github.com/greyblake/vim-preview.git",
   "http://github.com/mileszs/ack.vim.git",
   "http://github.com/altercation/vim-colors-solarized.git",
@@ -45,13 +44,6 @@ git_bundles = [
 require 'fileutils'
 require 'open-uri'
 
-def command_t(dir)
-  FileUtils.cd(dir)
-  puts "making command-t"
-  puts `rake make`
-  FileUtils.cd('..')
-end
-
 def vim_preview
   gems = [
     "bluecloth",
@@ -76,7 +68,6 @@ git_bundles.each do |url|
   puts "unpacking #{url} into #{dir}"
   `git clone #{url} #{dir}`
   FileUtils.rm_rf(File.join(dir, ".git"))
-  command_t dir if dir=="command-t"
   vim_preview if dir=="vim-preview"
 end
 

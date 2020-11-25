@@ -65,29 +65,6 @@ noremap   <Right>  <NOP>
 " Set tags for vim-fugitive
 set tags^=.git/tags
 
-" Command T
-" ignore files to make list load faster
-set wildignore+=tmp,.tags
-set wildignore+=*.gif,*.jpg,*.png,*.cache
-" ignore images in rails applications
-set wildignore+=public/images
-" ignore vendored files in rails applications
-set wildignore+=vendor
-
-" change local directory to current file so command-t lists relevant files
-map <leader>c :lcd %:p:h
-" refresh command-t so it sees new files and deletes
-map <leader>ctf :CommandTFlush
-" Here we are trying to get the arrow keys to work when using CommandT in TMux
-map <Esc>[A <Up>
-map <Esc>[B <Down>
-map <Esc>[C <Right>
-map <Esc>[D <Left>
-
-" Try and stop CommandT looking outside project root folder 
-let g:CommandTTraverseSCM = 'pwd'
-let g:CommandTFileScanner = 'find'
-
 " Use netrw to preview files in a directory
 let g:netrw_preview = 1 "preview in vertical split"
 let g:netrw_winsize = 0
@@ -222,6 +199,9 @@ endfunction
 source ~/.vim/.gbernhardt_tests
 source ~/.vim/.vimwiki
 
+" Command-T replacement FZF
+set rtp+=/usr/local/opt/fzf
+nmap <leader>t  :FZF<CR>
 
 function! Prose()
   Goyo
