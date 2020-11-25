@@ -202,6 +202,7 @@ source ~/.vim/.vimwiki
 " Command-T replacement FZF
 set rtp+=/usr/local/opt/fzf
 nmap <leader>t  :FZF<CR>
+nmap <leader>b  :Buffers<CR>
 
 function! Prose()
   Goyo
