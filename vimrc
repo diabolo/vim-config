@@ -34,7 +34,8 @@ let g:mapleader = ","
 nnoremap ' ,
 
 " Fast esc in insert mode
-inoremap jj <Esc>
+inoremap jk <Esc>
+inoremap kj <Esc>
 
 " Fast editing of the .vimrc
 map <leader>e :e! ~/.vimrc<cr>
@@ -169,7 +170,7 @@ function! <SID>StripTrailingWhitespaces()
   endif
 endfunction
 
-autocmd BufWritePre *.rb,*.markdown,*.md,*.feature :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre *.rb,*.js,*.css,*.scss :call <SID>StripTrailingWhitespaces()
 
 " Improve markdown
 "
@@ -200,7 +201,6 @@ source ~/.vim/.gbernhardt_tests
 source ~/.vim/.vimwiki
 
 " Command-T replacement FZF
-set rtp+=/usr/local/opt/fzf
 nmap <leader>t  :FZF<CR>
 nmap <leader>b  :Buffers<CR>
 

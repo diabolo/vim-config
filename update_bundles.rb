@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 git_bundles = [
+  "https://github.com/junegunn/fzf.git",
   "https://github.com/junegunn/fzf.vim.git",
   "http://github.com/kana/vim-textobj-user.git",
   "http://github.com/nelstrom/vim-textobj-rubyblock.git",
